@@ -1,12 +1,13 @@
-const obj_1 = {
+const person_2 = {
     name: 'Mansur',
     number: 789798456
 }
-function getName(obj_1) {
-    const {name} = obj_1
-    return {name}
+function getName(obj) {
+   obj = person_2
+   return obj.name
 }
-console.log(getName(obj_1));
+console.log(getName());
+
 
 
 
@@ -16,11 +17,11 @@ const person = {
     lastname: 'Kataev',
     age: 21
 }
-function getNames(person) {
-    const {firstname, lastname} = person
-    return [firstname, lastname]
+function getNames(obj) {
+    obj = person
+    return [obj.firstname, obj.lastname]
 }
-console.log(getNames(person));
+console.log(getNames());
 
 
 
@@ -29,9 +30,9 @@ const person_1 = {
     age: 21
 };
 function concatNames(obj, lastname) {
-    return `${obj = person_1.firstname}  ${lastname = 'Ахмедов'}`
+    return `${obj}  ${lastname = 'Ахмедов'}`
 };
-console.log(concatNames());
+console.log(concatNames(person_1.firstname));
 
 
 
