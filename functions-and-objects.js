@@ -1,47 +1,56 @@
-function getName(text) {
-    return text
+const obj_1 = {
+    name: 'Mansur',
+    number: 789798456
 }
-console.log(getName({key: 1}));
+function getName(obj_1) {
+    const {name} = obj_1
+    return {name}
+}
+console.log(getName(obj_1));
 
+
+
+
+const person = {
+    firstname: 'Khamzat',
+    lastname: 'Kataev',
+    age: 21
+}
 function getNames(person) {
-    return person = {
-        firstname: 'Khamzat',
-        lastname: 'Kataev',
-        age: 21
-    }
+    const {firstname, lastname} = person
+    return [firstname, lastname]
 }
-console.log(getNames().firstname, getNames().lastname);
+console.log(getNames(person));
 
-function concatNames(obj, lastname) {
-    return obj = {
-        firstname: 'Ахмед',
-        age: 26
-    }
+
+
+const person_1 = {
+    firstname: 'Ахмед',
+    age: 21
 };
-lastname = 'Ахмедов'
-console.log(concatNames().firstname, lastname);
+function concatNames(obj, lastname) {
+    return `${obj = person_1.firstname}  ${lastname = 'Ахмедов'}`
+};
+console.log(concatNames());
 
 
+
+
+const findPerson = {
+    firstname: 'Adam',
+    lastname: 'Adamov',
+    fathername: undefined
+};
+const secondPerson = {
+    firstname: 'Аслан',
+    lastname: 'Асланов',
+    fathername: 'Асланович'
+}
 function correctName(obj) {
-    obj = {
-        firstname: 'Adam',
-        lastname: 'Adamov',
-        fathername: undefined
-    }
-    if(obj.fathername === undefined){
-        return obj.firstname
-    }
-    
+    const {firstname, lastname, fathername} = obj;
+    return !fathername ? firstname : `${firstname} ${lastname} ${fathername}`
 }
-console.log(correctName());
+console.log(correctName(findPerson));
 
-function correctNames(obj) {
-    obj = {
-        firstname: 'Аслан',
-        lastname: 'Асланов',
-        fathername: 'Асланович'
-    }
-    return obj
-}
-console.log(correctNames().firstname, correctNames().lastname, correctNames().fathername);
+
 
