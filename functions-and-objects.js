@@ -30,9 +30,10 @@ const person_1 = {
     age: 21
 };
 function concatNames(obj, lastname) {
-    return `${obj}  ${lastname = 'Ахмедов'}`
+    const {firstname} = obj
+    return `${firstname}  ${lastname}`
 };
-console.log(concatNames(person_1.firstname));
+console.log(concatNames(person_1, 'Ахмедов'));
 
 
 
