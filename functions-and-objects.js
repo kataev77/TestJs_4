@@ -19,7 +19,7 @@ const person = {
 }
 function getNames(obj) {
     const {firstname, lastname, age} = obj
-    return `${firstname} ${lastname}`
+    return [firstname, lastname]
 }
 console.log(getNames(person));
 
