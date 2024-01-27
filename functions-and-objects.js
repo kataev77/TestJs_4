@@ -3,10 +3,10 @@ const person_2 = {
     number: 789798456
 }
 function getName(obj) {
-   obj = person_2
-   return obj.name
+   const {name, number} = obj
+   return name
 }
-console.log(getName());
+console.log(getName(person_2));
 
 
 
@@ -18,10 +18,10 @@ const person = {
     age: 21
 }
 function getNames(obj) {
-    obj = person
-    return [obj.firstname, obj.lastname]
+    const {firstname, lastname, age} = obj
+    return `${firstname} ${lastname}`
 }
-console.log(getNames());
+console.log(getNames(person));
 
 
 
